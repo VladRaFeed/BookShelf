@@ -1,0 +1,258 @@
+.modal-backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(79, 46, 232, 1);
+  opacity: 1;
+  visibility: visible;
+  transition: opacity 500ms, visibility 500ms;
+  z-index: 10;
+}
+
+.modal-backdrop.is-hidden .modal {
+  transform: rotate(-180deg);
+}
+.modal {
+  width: 579px;
+  height: 516px;
+  padding-top: 78px;
+  padding-bottom: 41px;
+  padding-left: 38px;
+  padding-right: 38px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: rotate (0);
+  transform: translate(-50%, -50%);
+  transition: transform 1000ms;
+  background-color:var(--start-form-bg-color);
+  border-radius: 4px;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 18px;
+  /* @media (max-width: 479px) {
+		width: 290px;
+	height: 609px;
+		} */
+  /* @media screen and (min-width: 1200px){
+		width: 528px;
+		height: 581px; */
+  /* } */
+}
+
+@media (max-width: 768px) {
+  .modal{
+    width: 335px;
+    height: 384px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+  } 
+
+.form-authorization {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+}
+
+@media (max-width: 768px) {
+  .form-authorization{
+   width: 295px;
+   height: 272px;
+
+  }
+  } 
+
+.is-hidden {
+  visibility: hidden;
+  opacity: 0;
+  pointer-events: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal .close-sign {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  cursor: pointer;
+  align-items: center;
+  top: 22px;
+  right: 22px;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background: #ffffff;
+  background-color: transparent;
+  border: 0px solid rgba(0, 0, 0, 0.1);
+  color: rgba(0, 0, 0, 1);
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+@media (max-width: 768px) {
+  .modal .close-sign{
+top: 10px;
+right: 10px;
+bottom: 6px;
+  }
+  } 
+
+.vector{
+  fill: var(--start-icons-and-btn-color);
+
+}
+.vector:hover, .vector:focus {
+  fill: var(--blue-color);
+  transition: fill ease 250ms;
+}
+@media (max-width: 768px) {
+  .vector{
+    width: 16px;
+    height: 16px;
+  }
+}
+
+
+.modal-input {
+  width: 499px;
+  height: 64px;
+  border-radius: 40px;
+  border-width: 2px;
+  border-color: var(--start-form-borders-color);
+  background-color: var(--start-form-bg-color);
+  color: var(--start-icons-and-btn-color);
+}
+
+@media (max-width: 768px){
+  .modal-input{
+    width: 295px;
+    height: 50px;
+  }
+}
+
+
+.modal-input::placeholder{
+  color: var(--start-icons-and-btn-color);
+  font-weight: 700;
+}
+
+   .start-icons {
+  position: absolute;
+  fill: var(  --start-btn-text-color);
+  stroke: var(  --start-icons-and-btn-color);
+  right: 25px;
+  width: 18px;
+  height: 18px;
+}
+.start-icons:hover, .start-icons:focus {
+  stroke: var(--blue-color);
+  transition: stroke ease 250ms;
+}
+.mail {
+  top: 94px;
+}
+.lock {
+  top: 170px;
+}
+@media (min-width: 768px) {
+.start-icons {
+  right: 32px;
+    width: 28px;
+  height: 28px;
+}
+.mail {
+    top: 110px;
+}
+.lock {
+  top: 200px;
+}
+  }
+
+.margin {
+  margin-bottom: 28px;
+  padding-left: 50px;
+  padding-right: 50px;
+}
+
+.modal-footer {
+  display: flex;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 25px;
+}
+
+
+.modal-footer-link.sign-in {
+  margin-left: 22px;
+}
+
+.modal-footer-link {
+  border-color: inherit;
+  border-width: 0px;
+  background-color: transparent;
+  color: var(--muted-text);
+  font-weight: 700;
+}
+.modal-footer-link:hover,
+.modal-footer-link:focus{
+  text-decoration: underline;
+}
+
+.hover-color {
+  color: #4f2ee8;
+}
+
+.is-display {
+  display: none;
+}
+
+.button-modal {
+  background-color: var(--start-form-borders-color);
+  color: var(--start-btn-text-color);
+  font-weight: 700;
+}
+
+.js-up.center-margin-up{
+  margin-left: auto;
+}
+
+.js-in.center-margin-in{
+  margin-right: auto;
+}
+/* .modal-footer-link.sign-in.js-out{
+  margin-left: auto;
+  margin-right: auto;
+} */
+
+
+.is-show{
+  position: absolute;
+  display: block;
+}
+
+.js-user-name {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.user-name-id{
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.my-element{
+  position: absolute;
+  z-index: 1000;
+  top: 20px;
+  left: 50%;
+  transform: translate(-50%,);
+}
